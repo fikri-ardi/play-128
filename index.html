@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play 128</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <audio src="music/background.mp3" id="music"></audio>
+
+    <div class="container">
+        <!-- Game instruction area -->
+        <div class="instruction-container">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="logo.png">
+            </div>
+            <h1 class="game-title">Play 128</h1>
+
+            <div class="instruction-title">
+                Game instruction
+            </div>
+            <ol>
+                <li>Klik "Start Game" button</li>
+                <li>Use WASD or arrow keys to move the node</li>
+                <li>Win the game!</li>
+            </ol>
+            <button class="startButton" onclick="startGame()">Start Game</button>
+        </div>
+        <!-- Game board area -->
+        <div class="game-container">
+            <h1 class="game-title">Play 128</h1>
+
+            <div class="score">
+                <div class="highscore-container">
+                    HIGHSCORE
+                    <div id="highscore">0</div>
+                </div>
+                <div class="score-container">
+                    SCORE
+                    <div id="score">0</div>
+                </div>
+            </div>
+
+            <canvas id="canvas" width="400px" height="400px"></canvas>
+        </div>
+        <!-- Alert area -->
+        <div class="alert-container">
+            <div class="winAlert">
+                You won!!
+                <br>
+                You got 128
+            </div>
+            <div class="loseAlert">
+                Game over!!
+                <br>
+                Your score is 0
+            </div>
+            <button class="newGameButton" onclick="startGame()">New Game</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
